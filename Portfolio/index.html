@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Bhoomika Thakwani — Personal Profile</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,500;9..144,700&family=Sora:wght@400;500;600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <a class="skip-link" href="#main">Skip to main content</a>
+
+  <header class="hero">
+    <img src="profile photo.jpeg" alt="Bhoomika Thakwani" class="profile-photo">
+
+    <nav class="site-nav" aria-label="Primary">
+      <a href="#about">About</a>
+      <a href="#skills">Skills</a>
+      <a href="#projects">Projects</a>
+      <a href="#chatbot-section">Chatbot</a>
+      <a href="#weather-section">Weather</a>
+      <button type="button" class="theme-toggle" id="theme-toggle" aria-pressed="false">
+        Dark mode
+      </button>
+    </nav>
+    <p class="hero-label">Personal Profile</p>
+    <h1>Bhoomika Thakwani</h1>
+    <p class="hero-lead">Undergraduate Computer Science Engineering Student</p>
+    <a class="cta" href="#about">About me</a>
+  </header>
+
+  <main id="main">
+    <section id="about" class="section about">
+      <h2>About</h2>
+      <p>
+        Hey Visitors! I am Bhoomika Thakwani, an undergraduate B.Tech CSE student in Computer Science and Engineering looking forward to building a career in the technical world.
+      </p>
+      <p>
+        I am currently in the 2nd year of my Bachelor of Technology program in Computer Science and Engineering at JECRC University, Jaipur. I am focusing on core programming and engineering concepts while developing skills such as problem solving through Data Structures and Algorithms, Prompt Engineering, Data Analysis, and Python Programming.
+      </p>
+    </section>
+
+    <section id="skills" class="section skills">
+      <h2>Skills</h2>
+      <ul class="skills-list">
+        <li>Prompt engineering</li>
+        <li>Data Analysis with Python, SQL and Power BI</li>
+        <li>Data Structures and Algorithms</li>
+        <li>Operating System Handling</li>
+        <li>Database Management</li>
+      </ul>
+    </section>
+
+    <section id="projects" class="section projects">
+      <h2>Projects</h2>
+      <div class="project-search-container">
+        <input type="text" id="projectSearch" placeholder="Search projects by name or tech (e.g., Python, Quiz, Book)..." aria-label="Search projects" />
+      </div>
+      <ul class="projects-list" id="projectsList">
+        <li data-tags="reading list app bolt ai web development">
+          <strong>Reading List App</strong>
+          <p class="project-desc">Developed a Reading List App using Bolt AI to help users organize and manage their reading journey, track books, and maintain personal reading lists.</p>
+          <a class="project-link" href="https://github.com/bhoomika25bcon2466-coder/readinglistapp" target="_blank" rel="noopener">🔗 View on GitHub: https://github.com/bhoomika25bcon2466-coder/readinglistapp</a>
+        </li>
+        <li data-tags="interactive quiz application html css javascript">
+          <strong>Interactive Quiz Application</strong>
+          <p class="project-desc">Built using HTML, CSS, and JavaScript, featuring dynamic questions, user feedback, DOM manipulation, and a responsive interface.</p>
+          <a class="project-link" href="https://github.com/bhoomika25bcon2466-coder/interactive-quiz-application" target="_blank" rel="noopener">🔗 View on GitHub: https://github.com/bhoomika25bcon2466-coder/interactive-quiz-application</a>
+        </li>
+        <li data-tags="python bug fixing cursor ai debugging">
+          <strong>Python Bug Fixing with Cursor AI</strong>
+          <p class="project-desc">Debugged and corrected errors in a Python script using Cursor AI, improving code functionality and gaining practical AI-assisted debugging experience.</p>
+          <a class="project-link" href="https://github.com/bhoomika25bcon2466-coder/bug-fixing-using-cursor-ai" target="_blank" rel="noopener">🔗 View on GitHub: https://github.com/bhoomika25bcon2466-coder/bug-fixing-using-cursor-ai</a>
+        </li>
+        <li data-tags="python programs collection google colab fundamentals">
+          <strong>Python Programs Collection</strong>
+          <p class="project-desc">Developed Python programs implementing factorial calculation, Fibonacci sequences, and data conversion using Google Colab.</p>
+          <a class="project-link" href="https://github.com/bhoomika25bcon2466-coder/python-programs-collection-" target="_blank" rel="noopener">🔗 View on GitHub: https://github.com/bhoomika25bcon2466-coder/python-programs-collection-</a>
+        </li>
+        <li data-tags="python code cleanup messy buggy correction">
+          <strong>Python Code Cleanup & Correction</strong>
+          <p class="project-desc">Organized and corrected messy Python files using Google Colab, enhancing code readability, structure, optimization, and clean maintenance.</p>
+          <a class="project-link" href="https://github.com/bhoomika25bcon2466-coder/Buggy_python" target="_blank" rel="noopener">🔗 View on GitHub: https://github.com/bhoomika25bcon2466-coder/Buggy_python</a>
+        </li>
+      </ul>
+    </section>
+
+    <!-- AI Chatbot Section -->
+    <section id="chatbot-section" class="section chatbot-section">
+      <h2>Portfolio AI Chatbot</h2>
+      <p class="chat-intro">Ask me questions about my background, skills, and projects!</p>
+      <div class="chat-container">
+        <div id="chatMessages" class="chat-messages" aria-live="polite">
+          <div class="message bot-message">Hello! I'm Bhoomika's portfolio assistant. Ask me things like "Who are you?", "What are your skills?", or "What projects have you completed?"</div>
+        </div>
+        <div class="chat-input-area">
+          <input id="chatInput" type="text" placeholder="Type your question here..." />
+          <button id="chatSendButton" type="button">Send</button>
+        </div>
+      </div>
+    </section>
+
+    <section id="weather-section" class="section weather-section"> 
+      <h2>Live Weather Checker</h2> 
+      <p>Enter a city to check its current weather.</p> 
+      <div class="weather-controls"> 
+        <input id="cityInput" type="text" placeholder="Enter city (e.g., Jaipur)" /> 
+        <button id="weatherButton" type="button">Get Weather</button> 
+      </div> 
+      <p id="weatherResult" aria-live="polite">Enter a city and click Get Weather.</p> 
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <p>© <span id="year">2026</span> · Bhoomika Thakwani</p>
+    <div class="footer-links">
+      <a href="mailto:bhumikathakwani4@gmail.com">Email Me</a> · 
+      <a href="https://github.com/bhoomika25bcon2466-coder" target="_blank" rel="noopener">GitHub</a> · 
+      <a href="https://www.linkedin.com/in/bhoomika-thakwani-250203381?utm_source=share_via&utm_content=profile&utm_medium=member_android" target="_blank" rel="noopener">LinkedIn</a>
+    </div>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>
